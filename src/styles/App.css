@@ -1,0 +1,78 @@
+/* Base Application Styles */
+body {
+  color: #fff;
+  background: #222;
+}
+
+#app{
+  margin:40px;
+}
+.index img {
+  margin: 40px auto;
+  border-radius: 4px;
+  background: #fff;
+  display: block;
+}
+
+.index .notice {
+  margin: 20px auto;
+  padding: 15px 0;
+  text-align: center;
+  border: 1px solid #000;
+  border-width: 1px 0;
+  background: #666;
+}
+
+button, input{
+  color:#000;
+}
+button{
+  margin-left:10px;
+}
+ul{
+  list-style: none;
+   padding:0;
+}
+
+.addCategory{
+  margin-bottom: 20px;
+
+}
+.category-header{
+  width: 100%;
+  margin-bottom: 12px;
+  background-color: #000;
+}
+.category-container{
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+}
+.inner-category{
+  margin-left:30px;
+}
+.todo-list{
+  margin-top: 15px;
+}
+.category-header h2{
+  display: inline-block;
+  padding:0px 10px;
+  line-height: 4px;
+}
+.todo-label.checked{
+  text-decoration: line-through;
+}
+.delete-cat{
+  position: absolute;
+  right:5px;
+  top:4px;
+  text-align: right;
+  display: inline-block;
+}
+.addTodo{
+  
+}
+.category-container{
+  position: relative;
+  width: 70%;
+  background-color: #666;
+}
