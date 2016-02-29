@@ -21,12 +21,18 @@ class AppComponent extends React.Component {
     this.setState({catagories: newCat});
   }
   deleteCategory (id){
-    var newCat  = this.state.catagories.filter(function(item){
-        if(item.id != id){
-          return item;
-        }
-    });
-    this.setState({catagories: newCat});
+    var r = confirm("Are you sure you want to remove this category and all todos within it?");
+      if (r == true) {
+           var newCat  = this.state.catagories.filter(function(item){
+          if(item.id != id){
+            return item;
+          }
+      });
+      this.setState({catagories: newCat});
+    } else {
+        
+    }
+   
   }
   render() {
     return (

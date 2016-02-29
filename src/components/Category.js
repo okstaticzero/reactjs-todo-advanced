@@ -7,10 +7,14 @@ class Category extends React.Component {
        super(props);
        this.addTodo = this.addTodo.bind(this);
        this.deleteCatagory = this.deleteCatagory.bind(this);
+       this.toggleExpand = this.toggleExpand.bind(this);
         this.state = {title: props.item.text,
-        			id: props.item.id, 
-        			todos: [] 
-        		};
+      			id: props.item.id, 
+      			todos: [],
+            expanded:false,
+            toggleClass:'open',
+            toggleIcon: '–'
+      		};
   } 
 
   addTodo (txt){
@@ -22,15 +26,26 @@ class Category extends React.Component {
   deleteCatagory (txt){
   	this.props.deleteCategory(this.state.id);
   }
+  toggleExpand(){
+    this.setState({expanded: !this.state.expanded});
+    if(this.state.expanded){
+      this.state.toggleClass = 'open'
+      this.state.toggleIcon = '–';
+    }else{
+      this.state.toggleClass = 'closed'
+      this.state.toggleIcon = '+';
+    }
+  }
  
   render() {
     return (
 	    <div>
 	      <div className="category-header">
-	        <h2>{this.state.title}</h2><button className="delete-cat pure-button" onClick={this.deleteCatagory}>delete category</button>
+	        <h2>{this.state.title}</h2><button className="pure-button toggle-expand" onClick={this.toggleExpand}>{this.state.toggleIcon}</button>
 	      </div>
-	      <div className='inner-category'>
+	      <div className={"inner-category " + this.state.toggleClass}>
 		      <AddTodo addTodo={this.addTodo} />
+          <button className="delete-cat pure-button" onClick={this.deleteCatagory}>Delete category</button>
 		      <TodoList items={this.state.todos} />
 		   </div> 
 		 </div>   

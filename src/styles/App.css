@@ -40,18 +40,13 @@ ul{
 }
 .category-header{
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 1px;
   background-color: #000;
 }
-.category-container{
-  margin-bottom: 40px;
-  padding-bottom: 30px;
-}
-.inner-category{
-  margin-left:30px;
-}
+
 .todo-list{
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 .category-header h2{
   display: inline-block;
@@ -63,16 +58,48 @@ ul{
 }
 .delete-cat{
   position: absolute;
-  right:5px;
-  top:4px;
+  right:10px;
+  top:0px;
+  margin-top:15px;
   text-align: right;
   display: inline-block;
 }
 .addTodo{
   
 }
+.addTodo .pure-form input{
+    padding: 0.3em 0.3em;
+    font-size: 14px;
+    margin-top:15px;
+}
+.inner-category{
+  position: relative;
+  overflow: hidden;
+  margin-left:30px;
+}
+
+.inner-category button{
+  padding: 0.4em 0.5em;
+    font-size: 14px;
+}
+.inner-category.closed{
+  max-height:0;
+  transition: max-height 0.4s ease-out;
+}
+.inner-category.open{
+  max-height:500px;
+  transition: max-height 0.4s ease-in;
+}
+
 .category-container{
   position: relative;
-  width: 70%;
+  width: 60%;
   background-color: #666;
+  margin-bottom: 0px;
+}
+.toggle-expand{
+  position: absolute;
+  padding: 0.2em 0.5em;
+  right:10px;
+  top:9px;
 }
