@@ -40,7 +40,6 @@ ul{
 }
 .category-header{
   width: 100%;
-  margin-bottom: 1px;
   background-color: #000;
 }
 
@@ -92,6 +91,8 @@ ul{
 }
 
 .category-container{
+  overflow: hidden;
+  border:1px solid #666;
   position: relative;
   width: 60%;
   background-color: #666;
@@ -102,4 +103,26 @@ ul{
   padding: 0.2em 0.5em;
   right:10px;
   top:9px;
+}
+
+.example-enter {
+
+  max-height:0;
+}
+
+.example-enter.example-enter-active {
+
+  max-height:500px;
+  transition: all 900ms ease;
+}
+
+.example-leave {
+
+  max-height:500px;
+}
+
+.example-leave.example-leave-active {
+
+  max-height:0;
+  transition: all 300ms ease;
 }

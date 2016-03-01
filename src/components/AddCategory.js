@@ -14,7 +14,7 @@ class AddCategory extends React.Component {
 		var txt = this.state.text.trim();
       if(txt.length > 0){
 		    this.props.addCategory(txt);
-        this.state.text = "";
+        this.state.text = '';
       }
 	}
 	changeContent(e){
@@ -33,8 +33,8 @@ class AddCategory extends React.Component {
     );
   }
 }
-AddCategory.propTypes = { 
-	text: React.PropTypes.string 
+AddCategory.propTypes = {
+	text: React.PropTypes.string
 };
 AddCategory.defaultProps = {
 

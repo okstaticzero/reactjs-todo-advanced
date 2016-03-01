@@ -8,7 +8,7 @@ class TodoList extends React.Component {
 	  render() {
 	    return <div className='todo-list'>{this.props.items.map(function(item){
 	    	return (<div className='todoitem' key={item.id}>
-	    				<label className="todo-label" for="remember">
+	    				<label className="todo-label" htmlFor="remember">
 				            <input id="remember" type="checkbox" /> {item.text}
 				        </label>
 	    			</div>)

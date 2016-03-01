@@ -14,7 +14,7 @@ class AddTodo extends React.Component {
 		var txt = this.state.text.trim();
       if(txt.length > 0){
 		    this.props.addTodo(txt);
-        this.state.text = "";
+        this.state.text = '';
       }
 	}
 	changeContent(e){
@@ -33,8 +33,8 @@ class AddTodo extends React.Component {
     );
   }
 }
-AddTodo.propTypes = { 
-	text: React.PropTypes.string 
+AddTodo.propTypes = {
+	text: React.PropTypes.string
 };
 AddTodo.defaultProps = {
 

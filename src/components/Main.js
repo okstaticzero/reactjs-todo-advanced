@@ -6,33 +6,28 @@ import AddCategory from './AddCategory';
 import CategoryList from './CategoryList';
 
 
-
 class AppComponent extends React.Component {
-	constructor(props) {
-     	super(props);
-    this.state = {catagories: [{text:'Groceries', id:Date.now()}]}; 	
-
+  constructor(props){
+    super(props);
+    this.state = {catagories:[{text:'Groceries', id:Date.now()}]};
     this.addCategory = this.addCategory.bind(this);
     this.deleteCategory = this.deleteCategory.bind(this);
   }
   addCategory (txt){
-  	//alert('add: '+ txt);
     var newCat = this.state.catagories.concat([{text:txt, id:Date.now() }]);
     this.setState({catagories: newCat});
   }
   deleteCategory (id){
-    var r = confirm("Are you sure you want to remove this category and all todos within it?");
+    var r = confirm('Are you sure you want to remove this category and all todos within it?');
       if (r == true) {
            var newCat  = this.state.catagories.filter(function(item){
           if(item.id != id){
             return item;
           }
       });
-      this.setState({catagories: newCat});
-    } else {
-        
+       this.setState({catagories: newCat});
+      }else{
     }
-   
   }
   render() {
     return (

@@ -9,21 +9,19 @@ class Category extends React.Component {
        this.deleteCatagory = this.deleteCatagory.bind(this);
        this.toggleExpand = this.toggleExpand.bind(this);
         this.state = {title: props.item.text,
-      			id: props.item.id, 
+      			id: props.item.id,
       			todos: [],
             expanded:false,
             toggleClass:'open',
             toggleIcon: '–'
       		};
-  } 
-
-  addTodo (txt){
-  	//alert('add: '+ txt);
+  }
+  addTodo(txt){
     var newTodo = this.state.todos.concat([{text:txt, id:Date.now() }]);
     this.setState({todos: newTodo});
   }
 
-  deleteCatagory (txt){
+  deleteCatagory(txt){
   	this.props.deleteCategory(this.state.id);
   }
   toggleExpand(){
@@ -43,12 +41,12 @@ class Category extends React.Component {
 	      <div className="category-header">
 	        <h2>{this.state.title}</h2><button className="pure-button toggle-expand" onClick={this.toggleExpand}>{this.state.toggleIcon}</button>
 	      </div>
-	      <div className={"inner-category " + this.state.toggleClass}>
+	      <div className={'inner-category ' + this.state.toggleClass}>
 		      <AddTodo addTodo={this.addTodo} />
           <button className="delete-cat pure-button" onClick={this.deleteCatagory}>Delete category</button>
 		      <TodoList items={this.state.todos} />
-		   </div> 
-		 </div>   
+		   </div>
+		 </div>
     );
   }
 }
