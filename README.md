@@ -1,6 +1,8 @@
 # reactjs-todo-advanced
 This demo is a modified todo example. It has the ability to add categories and also uses React animations. Modules are es6 based.
-The app is kicked off at: src/index.js Follow the fun from there. In the next iteration I'd like to add Redux
+The app is kicked off at: src/index.js Follow the fun from there. In the next iteration I'd like to add Redux.
+
+Working example: http://www.zerostatic.com/reactjs_todo/
 
 The build system used here is taken from: https://github.com/newtriks/generator-react-webpack
 
