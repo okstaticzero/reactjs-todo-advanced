@@ -15,7 +15,7 @@ class CategoryList extends React.Component {
 	    	return (<div className='category-container' key={item.id}>
 	    				<Category item={item} deleteCategory={_this.props.deleteCategory} />
 	    			</div>)
-	    })}
+	    	})}
 	    	</ReactCSSTransitionGroup>
 	    	</div>;
 	  }
