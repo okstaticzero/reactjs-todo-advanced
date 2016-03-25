@@ -1,11 +1,13 @@
 import React from 'react';
 import AddTodo from './AddTodo';
 import TodoList from './TodoList';
+import actions from '../actions/actions';
+import { connect } from 'react-redux';
 
 class Category extends React.Component {
 	constructor(props) {
        super(props);
-       this.addTodo = this.addTodo.bind(this);
+       
        this.deleteCatagory = this.deleteCatagory.bind(this);
        this.toggleExpand = this.toggleExpand.bind(this);
         this.state = {title: props.item.text,
@@ -16,13 +18,11 @@ class Category extends React.Component {
             toggleIcon: '–'
       		};
   }
-  addTodo(txt){
-    var newTodo = this.state.todos.concat([{text:txt, id:Date.now() }]);
-    this.setState({todos: newTodo});
-  }
-
-  deleteCatagory(txt){
-  	this.props.deleteCategory(this.state.id);
+ 
+  deleteCatagory(){
+    if (window.confirm('Do you really want to delete this category and all todos within it?')){
+     this.props.dispatch(actions.removeCategory(this.state.id));
+    }
   }
   toggleExpand(){
     this.setState({expanded: !this.state.expanded});
@@ -42,9 +42,9 @@ class Category extends React.Component {
 	        <h2>{this.state.title}</h2><button className="pure-button toggle-expand" onClick={this.toggleExpand}>{this.state.toggleIcon}</button>
 	      </div>
 	      <div className={'inner-category ' + this.state.toggleClass}>
-		      <AddTodo addTodo={this.addTodo} />
+		      <AddTodo catID={this.props.catID}/>
           <button className="delete-cat pure-button" onClick={this.deleteCatagory}>Delete category</button>
-		      <TodoList items={this.state.todos} />
+		      <TodoList items={this.props.todos} catID={this.props.catID}/>
 		   </div>
 		 </div>
     );
@@ -54,4 +54,5 @@ class Category extends React.Component {
 Category.defaultProps = {
 };
 
-export default Category;
+//export default Category;
+export default connect()(Category);

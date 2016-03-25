@@ -1,9 +1,10 @@
 import React from 'react';
+import actions from '../actions/actions';
+import { connect } from 'react-redux';
 
 class AddTodo extends React.Component {
 	constructor(props) {
         super(props);
-
         this.changeContent = this.changeContent.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {text: props.text};
@@ -13,14 +14,13 @@ class AddTodo extends React.Component {
 		e.preventDefault();
 		var txt = this.state.text.trim();
       if(txt.length > 0){
-		    this.props.addTodo(txt);
-        this.state.text = '';
+        this.props.dispatch(actions.addTodo(txt, this.props.catID));
+        //this.state.text = '';
+        this.setState({text:''})
       }
 	}
 	changeContent(e){
-		//alert('hi: '+ e.target.value);
     this.setState({text: e.target.value});
-
   	}
   render() {
     return (
@@ -40,4 +40,5 @@ AddTodo.defaultProps = {
 
 };
 
-export default AddTodo;
+//export default AddTodo;
+export default connect()(AddTodo);

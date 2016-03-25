@@ -8,12 +8,11 @@ class CategoryList extends React.Component {
        super(props);
      }
 	  render() {
-	  	{var _this = this}
 	    return <div>
-	    	<ReactCSSTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+	    	<ReactCSSTransitionGroup transitionName='example' transitionEnterTimeout={500} transitionLeaveTimeout={300}>
 	    	{this.props.items.map(function(item){
-	    	return (<div className='category-container' key={item.id}>
-	    				<Category item={item} deleteCategory={_this.props.deleteCategory} />
+	    	return (<div className='category-container' key={item.id} >
+	    				<Category item={item} catID={item.id} todos={item.todos} key={item.id}/>
 	    			</div>)
 	    	})}
 	    	</ReactCSSTransitionGroup>

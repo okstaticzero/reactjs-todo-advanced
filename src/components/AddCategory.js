@@ -1,4 +1,6 @@
 import React from 'react';
+import actions from '../actions/actions';
+import { connect } from 'react-redux';
 
 class AddCategory extends React.Component {
 	constructor(props) {
@@ -13,9 +15,11 @@ class AddCategory extends React.Component {
 		e.preventDefault();
 		var txt = this.state.text.trim();
       if(txt.length > 0){
-		    this.props.addCategory(txt);
-        this.state.text = '';
+		    //this.props.addCategory(txt);
+        this.props.dispatch(actions.addCategory(txt));
+        this.setState({text: ''});
       }
+
 	}
 	changeContent(e){
 		//alert('hi: '+ e.target.value);
@@ -40,4 +44,6 @@ AddCategory.defaultProps = {
 
 };
 
-export default AddCategory;
+
+//export default AddCategory;
+export default connect()(AddCategory);
