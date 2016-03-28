@@ -4,6 +4,7 @@
 <ul><li>Uses Reactjs with Redux
 </li><li>Organize todos by categories
 </li><li>Has undo/redo fuctionality via this Redux add-on https://github.com/omnidan/redux-undo
+</li><li>Stores state and its history in localstorage (reload browser to test)
 </li><li>Uses React animations: https://facebook.github.io/react/docs/animation.html
 </li><li>ES6 syntax via Babel
 </li><li>Webpack build system courtesy of: https://github.com/newtriks/generator-react-webpack
