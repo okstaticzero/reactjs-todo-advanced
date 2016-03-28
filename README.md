@@ -1,10 +1,16 @@
 # reactjs-todo-advanced
-This demo is a modified Reactjs todo example. It uses Redux and adds the ability to add categories and uses React animations. Modules are es6 based.
+
+Features of todo advanced:
+• Uses Reactjs with Redux
+• Seperates todos into categories
+• Has undo/redo fuctionality via this Redux add-on https://github.com/omnidan/redux-undo
+• Uses React animations
+• ES6 syntax via Babel
+• Webpack build system courtesy of: https://github.com/newtriks/generator-react-webpack
+
 The app is kicked off at: src/index.js.
 
 Working example: http://www.zerostatic.com/reactjs_todo/
-
-The build system used here is taken from: https://github.com/newtriks/generator-react-webpack
 
 ```
 //cd to directory and...
