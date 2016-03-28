@@ -180,3 +180,12 @@ ul{
 .button-green {
     background: rgb(28, 184, 65); /* this is a green */
 }
+#github{
+  display: inline-block;
+  margin-top: 30px;
+  color:#999;
+  text-decoration: none;
+}
+#github:hover{
+  color:#FFF;
+}

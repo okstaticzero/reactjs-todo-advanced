@@ -1,7 +1,6 @@
 import React from 'react';
 import Category from './Category';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import TimeTravel from './TimeTravel';
 
 class CategoryList extends React.Component {
 	constructor(props) {

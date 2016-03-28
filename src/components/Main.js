@@ -21,6 +21,7 @@ class AppComponent extends React.Component {
           <TimeTravel />
         </div>
         <CategoryList items={this.props.categories.present} />
+        <a id='github' href='https://github.com/zerostatic/reactjs-todo-advanced'>GitHub</a>
       </div>
     );
   }
