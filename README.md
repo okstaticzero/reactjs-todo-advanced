@@ -1,6 +1,6 @@
 # reactjs-todo-advanced
 
-Features of todo advanced:
+<b>Features:</b>
 <ul><li>Uses Reactjs with Redux
 </li><li>Organize todos by categories
 </li><li>Has undo/redo fuctionality via this Redux add-on https://github.com/omnidan/redux-undo
