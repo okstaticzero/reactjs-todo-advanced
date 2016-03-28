@@ -22,13 +22,26 @@ var initialState = {
         }, {
             id: 2,
             text: 'save state to local storage',
-            checked:false
+            checked:true
         }]
     }]
 }
 
-var store = createStore(reducer, initialState);
+var store;
+if(!localStorage.getItem('todoStore')) {
+    //if no local storage set, then use defualt above
+  store = createStore(reducer, initialState);
+} else {
+    //else grab data from local storage
+  store = createStore(reducer, JSON.parse(localStorage.getItem('todoStore')));
+}
 
+
+
+store.subscribe(() =>
+    //store state whenever it changes
+    localStorage.setItem('todoStore', JSON.stringify(store.getState()))
+)
 
 // Render the main component into the dom
 ReactDOM.render(
