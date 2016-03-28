@@ -1,6 +1,8 @@
 var update = require('react-addons-update');
+import { combineReducers } from 'redux';
+import undoable from 'redux-undo';
 
-export default function reduce(state = {}, action) {
+export default function reducer(state = {}, action) {
   switch (action.type) {
     case 'ADD_CATEGORY':
       return Object.assign({}, state, {
@@ -21,7 +23,6 @@ export default function reduce(state = {}, action) {
       })
     case 'ADD_TODO':
       var index = state.categories.findIndex(x => x.id==action.categoryID);
-
       var newState = update(state, {
         categories: {
             [index]: {
@@ -51,7 +52,6 @@ export default function reduce(state = {}, action) {
           }
       })
     return newState
-
     default:
       return state
   }

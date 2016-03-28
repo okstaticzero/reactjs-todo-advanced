@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/Main';
-import reduce from './reducers/Reducer';
+import reducer from './reducers/Index';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux'
 
@@ -14,15 +14,20 @@ var initialState = {
             id: 0,
             text: 'add redux',
             checked:true
-        }, {
+        },
+        {
             id: 1,
+            text: 'implement undo / redo',
+            checked:true
+        }, {
+            id: 2,
             text: 'save state to local storage',
             checked:false
         }]
     }]
 }
 
-var store = createStore(reduce, initialState);
+var store = createStore(reducer, initialState);
 
 
 // Render the main component into the dom

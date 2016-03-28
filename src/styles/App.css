@@ -89,20 +89,23 @@ ul{
   max-height:500px;
   transition: max-height 0.4s ease-in;
 }
-
+.category-wrapper, .header-wrapper{
+  position: relative;
+  width: 60%;
+}
 .category-container{
+  position: relative;
   overflow: hidden;
   border:1px solid #666;
   position: relative;
-  width: 60%;
   background-color: #666;
   margin-bottom: 0px;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
   #app{
     margin:10px;
   }
-  .category-container{
+  .category-wrapper, .header-wrapper{
     width:100%;
   }
   .category-header h2{
@@ -129,6 +132,13 @@ ul{
   }
   .category-container .pure-button {
     margin-left: 0px;
+  }
+  .redo, .undo{
+    display: block;
+    margin-bottom: 5px;
+  }
+  .header-wrapper{
+    margin-bottom: 35px;
   }
 }
 .toggle-expand{
@@ -161,4 +171,12 @@ ul{
 }
 .type-true{
   text-decoration:line-through;
+}
+.timeTravel{
+  position: absolute;
+  top:0;
+  right:0;
+}
+.button-green {
+    background: rgb(28, 184, 65); /* this is a green */
 }

@@ -3,6 +3,7 @@ require('styles/App.css');
 
 import React from 'react';
 import AddCategory from './AddCategory';
+import TimeTravel from './TimeTravel';
 import CategoryList from './CategoryList';
 import { connect } from 'react-redux';
 
@@ -15,8 +16,11 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div className="index">
-      	<AddCategory />
-        <CategoryList items={this.props.categories} />
+        <div className='header-wrapper'>
+      	   <AddCategory />
+          <TimeTravel />
+        </div>
+        <CategoryList items={this.props.categories.present} />
       </div>
     );
   }

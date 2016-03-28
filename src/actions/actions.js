@@ -27,6 +27,11 @@ let actions = {
 			categoryID:categoryID,
 			checked:value
 		}
+	},
+	undo:function(){
+		return{
+			type:'UNDO'
+		}
 	}
 }
 
