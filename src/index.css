@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.nav{
+	display:inline-block;
+	list-style: none;
+	margin-top: 15px;
+}
+
+.nav li a{
+  text-decoration: none;
+}
+.nav li{
+	margin-bottom: 4px;
+}
+
+.todos{
+	margin-top: 15px;
+	display:inline-block;
+	list-style: none;
+	padding-left: 0;
+	width:100%;
+}
+.todos li{
+	position: relative;
+	border-top: 1px solid #CCC;
+	padding-top: 6px;
+}
+.todos li:last-child{
+  border-bottom: 1px solid #CCC;
+}
+.todos li button{
+  position: absolute;
+  top:7px;
+  right:0;
+}
+.todos li p{
+	width: calc(100% - 40px);
+}
+
+.left-col{
+	background-color: #CCC;
+	padding: 15px;
+	padding-top: 40px;
+}
+
+.right-col{
+	padding: 15px;
+  padding-top: 0;
+}
+.right-col h2{
+  padding-top: 0;
+  margin-top: 0;
+
+}
+#ALL{
+	margin-bottom: 20px;
+}
+.cat-delete{
+	opacity: .5;
+	margin-left: 10px;
+}
+.cat-delete:hover{
+	opacity: 1;
+}
+.top-nav{
+  border: 1px solid #999;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+}
+.top-nav p{
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #999;
+}
+.redo{
+  margin-left: 20px;
+}
