@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 </ul>
 The app is kicked off at: src/index.js.
 
-Working example: http://www.zerostatic.com/reactjs_todo/
+Working example: http://todoadvanced.zerostatic.com
 
 ```
 //cd to directory and...
