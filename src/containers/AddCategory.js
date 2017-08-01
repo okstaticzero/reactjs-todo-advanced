@@ -7,10 +7,9 @@ class AddCategory extends React.Component {
    constructor(props) {
     super(props);
     this.state={inputText:""}
-    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(e){
+  handleChange = (e) =>{
     this.setState({inputText: e.target.value})
   }
 
